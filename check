@@ -1,0 +1,19 @@
+<input type="text" id="solution" placeholder="Lösungswort eingeben">
+<button onclick="checkSolution()">Prüfen</button>
+<p id="feedback"></p>
+
+<script>
+    function checkSolution() {
+        const correctWord = "HACKATHON"; // Dein Lösungswort
+        const userInput = document.getElementById("solution").value.toUpperCase();
+        const feedback = document.getElementById("feedback");
+
+        if (userInput === correctWord) {
+            feedback.innerHTML = "✅ Richtig!";
+            feedback.style.color = "green";
+        } else {
+            feedback.innerHTML = "❌ Falsch! Versuch es nochmal.";
+            feedback.style.color = "red";
+        }
+    }
+</script>
